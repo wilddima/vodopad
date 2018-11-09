@@ -1,1 +1,4 @@
-opencv-python=3.4.3
+opencv-python
+matplotlib
+face_recognition
+tqdm
