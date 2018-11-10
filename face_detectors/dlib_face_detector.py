@@ -1,5 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
+import face_recognition
 
 def detect_face(imagepath):
     image = face_recognition.load_image_file(imagepath)
