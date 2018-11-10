@@ -4,30 +4,34 @@ import cv2
 import os
 import re
 import pdb
-from face_detectors.dlib_face_detector import detect_face as dlib_df
-from face_detectors.haar_face_detector import detect_face as haar_df
+from face_identifiers.dlib_face_identifier import DlibFaceIdentifier, image_ext
 from tqdm import trange, tqdm
-
-image_ext = re.compile(r'\.jpg|\.jpg')
 
 def main():
     path = sys.argv[1]
-    fast = true if len(sys.argv) > 2 else false
+    reference = sys.argv[2]
+    face_ident = DlibFaceIdentifier(reference, False)
+    results = []
+
+    print('Recognition ...')
     if os.path.isdir(path):
         for filepath in tqdm(os.listdir(path)):
             extension = os.path.splitext(filepath)[1]
             if image_ext.match(extension):
-                detect_face(path + '/' + filepath, fast)
+               results.append(face_ident.identify(path + '/' + filepath))
     elif os.path.isfile(path):
-        detect_face(path, fast)
+        results.append(face_ident.identify(path))
     else:
-        os.exit(1)
+        sys.exit(1)
 
-def detect_face(imagepath, fast=True):
-    if fast:
-        haar_df(imagepath)
-    else:
-        dlib_df(imagepath)
+    print('Copying ...')
+    for result in tqdm(results):
+        img_path, exists = result
+        for name, isexist in zip(exists.keys(), exists.values()):
+            if isexist:
+                if not os.path.isdir(name):
+                    os.mkdir(name)
+                os.system("cp {} {}".format(img_path, name))
 
 if __name__ == "__main__":
     main()
