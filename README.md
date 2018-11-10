@@ -1,3 +1,3 @@
 # Vodopad
 
-Manage your photographs with the power of deep learning!
+Manage your photographs with the power of deep learning! 📷
