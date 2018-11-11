@@ -2,19 +2,19 @@
 
 Manage your photographs with the power of deep learning! 📷
 
-## Install
+## Overview
 
-Using [pip](https://github.com/pypa/pip)
+A tool for finding people in photos and grouping them into separate folders.
+
+### Install
+
+Using [pip](https://github.com/pypa/pip):
 
 ```
 pip install vodopad
 ```
 
-## Overview
-
-A tool for finding people in photos and grouping them into separate folders.
-
-## Usage
+### Usage
 
 The first parameter is a photo or a folder with photos, among which the utility will search for people.
 
