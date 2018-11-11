@@ -3,3 +3,5 @@ testimages
 references
 **/*.swp
 __pycache__
+*.pyc
+vodopad.egg-info

@@ -1,9 +1,12 @@
 import face_recognition
-import matplotlib.pyplot as plt
 import cv2
 import os
 import re
 import pdb
+try:
+    import matplotlib.pyplot as plt
+except:
+    pass
 
 image_ext = re.compile(r'\.JPG|\.jpg|\.jpeg|\.JPEG|\.PNG|\.png')
 
