@@ -44,7 +44,7 @@ def main(path, people, move, output):
     for pth in tqdm(img_pathes):
         if transfer_image(face_ident.identify(pth), output, move): transered_count += 1
 
-    print('Copied {} photos'.format(transered_count))
+    print('Copied {} photos to {}'.format(transered_count, output))
 
 def transfer_image(result, output, move):
     img_path, exists = result
