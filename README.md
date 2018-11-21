@@ -4,7 +4,7 @@ Manage your photographs with the power of deep learning! 📷
 
 ## Overview
 
-A tool for finding people in photos and grouping them into separate folders.
+A tool for finding people in photographs by one example of a photo with the person and grouping them into separate folders.
 
 ### Install
 
