@@ -43,7 +43,7 @@ vodopad ./vacation_photos_folder --people=myphoto.jpg --output='./only_my_photos
 
 ### Example
 
-![Example](https://d2ddoduugvun08.cloudfront.net/items/2T2c2L1y2u0r3o0H1u1K/render1542018589538.gif)
+![Example](https://d2ddoduugvun08.cloudfront.net/items/0G0w1g1k060I150x2j24/render1542806024050.gif)
 
 ## Contributing
 
